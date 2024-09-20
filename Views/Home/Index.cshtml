@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row p-1">
+    <div class="input-group">
+        <label class="input-group-text">Host</label>
+        <input type="text" id="host" class="form-control" />
+        <input type="button" id="connectBtn" value="Connect" class="btn btn-outline-primary" />
+        <input type="button" id="disconnectBtn" value="Disconnect" class="btn btn-outline-primary" disabled />
+    </div>
+</div>
+<div class="row p-1">
+    <div class="input-group">
+        <label class="input-group-text">Username</label>
+        <input type="text" id="user" class="form-control" value="pi" />
+        <label class="input-group-text">Password</label>
+        <input type="password" id="pass" class="form-control" value="password" />
+    </div>
+</div>
+<div id="terminal-container"></div>
+
+@section scripts {
+    @* Add Libraries *@
+    <link rel="stylesheet" href="~/lib/xterm/xterm/css/xterm.css" asp-append-version="true" />
+    <script src="~/lib/xterm/xterm/lib/xterm.js" asp-append-version="true"></script>
+    <script src="~/lib/xterm/addon-fit/lib/addon-fit.js" asp-append-version="true"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+    <script src="~/js/terminal.js" asp-append-version="true"></script>
+
+}
